@@ -58,3 +58,59 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---------- Explore Wayanad map pins ---------- */
+.ra-pin,
+.ra-pin-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 2px solid var(--color-ivory);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.3);
+  font-family: var(--font-sans);
+}
+.ra-pin {
+  width: 28px;
+  height: 28px;
+  background: var(--color-forest-800);
+  color: var(--color-ivory);
+  font-size: 12px;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.2s;
+}
+.ra-pin.is-active {
+  background: var(--color-earth);
+  transform: scale(1.25);
+}
+.ra-pin-home {
+  width: 40px;
+  height: 40px;
+  background: var(--color-earth);
+  color: var(--color-ivory);
+  border-width: 3px;
+}
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: var(--color-ivory-dark);
+}
+.leaflet-popup-content a {
+  color: var(--color-forest-700);
+  font-weight: 600;
+}
+.ra-leg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 22px;
+  border-radius: 9999px;
+  background: var(--color-ivory);
+  color: var(--color-earth-dark);
+  border: 1px solid var(--color-beige-dark);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+  white-space: nowrap;
+}

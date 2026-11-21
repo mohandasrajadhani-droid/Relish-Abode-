@@ -12,14 +12,16 @@ import {
   Mountain,
   Navigation,
   Phone,
+  Plane,
   Sofa,
+  TrainFront,
   Tv,
   UtensilsCrossed,
   Wifi,
   type LucideIcon,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { facilities, mapsLink, photos, site, spaces, whatsappLink } from "@/content/site";
+import { directionsLink, facilities, gettingHere, mapsLink, photos, site, spaces, whatsappLink } from "@/content/site";
 
 /* ---------- Quick facts ---------- */
 export function QuickFacts() {
@@ -233,6 +235,36 @@ export function Location() {
             >
               <Phone size={18} aria-hidden /> {site.phoneDisplay}
             </a>
+          </div>
+          <div className="mt-10">
+            <p className="mb-3 font-medium text-forest-900">Getting here</p>
+            <ul className="space-y-3">
+              {gettingHere.map((g) => {
+                const Icon = g.kind === "train" ? TrainFront : Plane;
+                return (
+                  <li key={g.name} className="flex items-start gap-4 rounded-2xl border border-beige-dark/40 bg-ivory/70 p-4">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest-800 text-ivory">
+                      <Icon size={18} aria-hidden />
+                    </span>
+                    <span className="flex-1">
+                      <span className="block text-xs font-medium uppercase tracking-wide text-earth">{g.label}</span>
+                      <span className="mt-0.5 block font-medium text-forest-900">{g.name}</span>
+                      <span className="mt-0.5 block text-sm text-muted">
+                        About {g.km} km by road · {g.note}
+                      </span>
+                      <a
+                        href={directionsLink(g.query)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-1.5 inline-flex items-center gap-1 text-sm font-medium text-forest-700 underline-offset-2 hover:underline"
+                      >
+                        <Navigation size={14} aria-hidden /> Route and travel time
+                      </a>
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </Reveal>
         <Reveal delay={0.1}>

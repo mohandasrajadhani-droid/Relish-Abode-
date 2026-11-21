@@ -2,6 +2,8 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Gallery } from "@/components/Gallery";
 import { Enquiry } from "@/components/Enquiry";
+import { ExploreWayanad } from "@/components/ExploreWayanad";
+import { TourPlans } from "@/components/TourPlans";
 import { Facilities, Footer, Intro, Location, MobileBookBar, QuickFacts, Spaces, TheView } from "@/components/Sections";
 import { site } from "@/content/site";
 
@@ -21,6 +23,8 @@ const jsonLd = {
     postalCode: "673121",
     addressCountry: "IN",
   },
+  geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
+  hasMap: site.mapsPinLink,
   amenityFeature: ["Free Wi-Fi", "Kitchen", "Campfire", "Balcony with mountain view"].map((name) => ({
     "@type": "LocationFeatureSpecification",
     name,
@@ -43,6 +47,8 @@ export default function Home() {
         <Gallery />
         <Enquiry />
         <Location />
+        <ExploreWayanad />
+        <TourPlans />
       </main>
       <Footer />
       <MobileBookBar />
