@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Relish Abode design tokens
+   Forest green (primary), warm ivory (ground), beige + earthy brown (accents). */
+@theme {
+  --color-forest-950: #0f2118;
+  --color-forest-900: #163024;
+  --color-forest-800: #1f3d2d;
+  --color-forest-700: #2a5039;
+  --color-forest-600: #3a6a4c;
+  --color-forest-100: #e3ebe4;
+  --color-ivory: #faf6ee;
+  --color-ivory-dark: #f3ecdf;
+  --color-beige: #e6d9c2;
+  --color-beige-dark: #cbb995;
+  --color-earth: #6e4b31;
+  --color-earth-dark: #4f3522;
+  --color-ink: #1d231f;
+  --color-muted: #5c6660;
+
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-earth);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
