@@ -145,7 +145,7 @@ export const gettingHere = [
    lat/lng = approximate map pin positions (overview map only; directions use the place name). */
 export type Spot = {
   name: string;
-  kind: "Viewpoint" | "Waterfall" | "Lake" | "Trek" | "Heritage" | "Wildlife" | "Dam" | "Island" | "Temple";
+  kind: "Viewpoint" | "Waterfall" | "Lake" | "Trek" | "Heritage" | "Wildlife" | "Dam" | "Island" | "Temple" | "Village" | "Adventure";
   km: number;
   note: string;
   lat: number;
@@ -167,6 +167,12 @@ const spotList: Spot[] = [
   { name: "Pazhassi Tomb, Mananthavady", kind: "Heritage", km: 30, note: "Memorial and museum of Pazhassi Raja", lat: 11.8037, lng: 76.0021, query: "Pazhassi Tomb, Mananthavady" },
   { name: "Kuruva Island", kind: "Island", km: 34, note: "River islands on the Kabini, reached by bamboo raft", lat: 11.8217, lng: 76.0866, query: "Kuruva Island, Wayanad" },
   { name: "Muthanga Wildlife Sanctuary", kind: "Wildlife", km: 43, note: "Jeep safari for elephants, deer and birds", lat: 11.666, lng: 76.374, query: "Muthanga Wildlife Sanctuary" },
+  { name: "Karlad Lake", kind: "Lake", km: 17, note: "Quiet lake near Banasura with kayaking and a zip line over the water", lat: 11.656, lng: 75.982, query: "Karlad Lake, Thariode, Wayanad" },
+  { name: "Kurumbalakotta", kind: "Viewpoint", km: 15, note: "Hilltop sunrise walk with a 360° view of Wayanad. Go at dawn", lat: 11.665, lng: 76.03, query: "Kurumbalakotta, Wayanad" },
+  { name: "Kolagappara", kind: "Viewpoint", km: 20, note: "Big rock hill near Meenangadi, short climb, wide valley views", lat: 11.633, lng: 76.188, query: "Kolagappara, Wayanad" },
+  { name: "900 Kandi & Glass Bridge", kind: "Adventure", km: 25, note: "Forest hills and a glass bridge. Last stretch by jeep only, from Kalladi", lat: 11.525, lng: 76.19, query: "900 Kandi Glass Bridge, Meppadi, Wayanad" },
+  { name: "Chekadi Village", kind: "Village", km: 42, note: "Paddy fields by the Kabini near Pulpally. Village roads can be rough", lat: 11.845, lng: 76.15, query: "Chekadi, Pulpally, Wayanad" },
+  { name: "Begur Wildlife Sanctuary", kind: "Wildlife", km: 45, note: "Forest range near Kattikulam, part of the Tholpetty side", lat: 11.885, lng: 76.085, query: "Begur Forest, Kattikulam, Wayanad" },
   { name: "Thirunelli Temple", kind: "Temple", km: 58, note: "Ancient Vishnu temple in the Brahmagiri hills", lat: 11.9124, lng: 75.9963, query: "Thirunelli Temple, Wayanad" },
 ];
 
